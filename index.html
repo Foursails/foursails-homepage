@@ -1,19 +1,23 @@
 ---
 layout: default
+title: Home
 ---
+<!-- about us something or other -->
 <div class="posts">
-	<!-- about we're a consulting company thats awesome -->
-	<!-- highlights and links to projects and blogs -->
   {% for post in site.posts %}
     <article class="post">    
-      
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-      <div class="entry">
-        {{ post.content | truncatewords:40}}
-      </div>
+      <!-- thumbnail -->
+      <a href="{{ post.url }}">
+        <img class="post-thumb" src="images/{{ post.thumb }}" />
+      </a>
+
+      <!-- title -->
+      <h1>{{ post.title }}</h1>
       
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      <!-- blurb -->
+      <div>{{ post.blurb }}</div>
+      
     </article>
   {% endfor %}
 </div>
