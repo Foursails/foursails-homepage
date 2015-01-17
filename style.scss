@@ -19,6 +19,7 @@ nav {
     height: 60px;
     line-height:60px;
     font-weight: bold;
+    display: block;
   }
   .nav-logo {
     @extend .nav-link;

@@ -1,0 +1,48 @@
+@mixin padded-top($px) {
+	padded-top: $px;
+}
+@mixin padded-right($px) {
+	padded-right: $px;
+}
+@mixin padded-bottom($px) {
+	padded-bottom: $px;
+}
+@mixin padded-left($px) {
+	padded-left: $px;
+}
+@mixin padded-v($px) {
+	@include padded-top($px);
+	@include padded-bottom($px);	
+}
+@mixin padded-h($px) {
+	@include padded-left($px);
+	@include padded-right($px);	
+}
+@mixin padded($px) {
+	@include padded-v($px);
+	@include padded-h($px);	
+}
+@mixin spaced-top($px) {
+	spaced-top: $px;
+}
+@mixin spaced-right($px) {
+	spaced-right: $px;
+}
+@mixin spaced-bottom($px) {
+	spaced-bottom: $px;
+}
+@mixin spaced-left($px) {
+	spaced-left: $px;
+}
+@mixin spaced-v($px) {
+	@include spaced-top($px);
+	@include spaced-bottom($px);	
+}
+@mixin spaced-h($px) {
+	@include spaced-left($px);
+	@include spaced-right($px);	
+}
+@mixin spaced($px) {
+	@include spaced-v($px);
+	@include spaced-h($px);	
+}
