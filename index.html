@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!-- 
+
+               *   ,MMM8&&&.            *
+                  MMMM88&&&&&    .
+                 MMMM88&&&&&&&
+     *           MMM88&&&&&&&&
+                 MMM88&&&&&&&&
+                 'MMM88&&&&&&'
+                   'MMM8&&&'      *
+          |\___/|
+         =) ^Y^ (=  Mew. If you're looking for something to do,
+          \  w  /     email me at matt.davis@foursails.co
+           )=*=(        for employment opportunities.
+          /     \
+          |     |
+         /| | | |\
+         \| | |_|/\
+  jgs_/\_//_// ___/\_/\_/\_/\_/\_/\_/\_/\_/\_
+  |  |  |  | \_) |  |  |  |  |  |  |  |  |  |
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Foursails Technology Group</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    
+    <!-- Montserrat: http://www.google.com/fonts/#QuickUsePlace:quickUse/Family:Montserrat -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:700,100' rel='stylesheet' type='text/css'>
+        
+    <!-- Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- foursails custom styles -->
+    <style>
+
+      /* Format "technology group" in the logo */
+      @media (min-width: 992px) {
+        #foursails .navbar-brand {
+          line-height: 30px;
+          padding-top: 8px; use with logo 
+          /*padding-top: 18px;  use without logo */
+        }
+        #foursails .navbar-brand span:nth-child(2) {
+          font-size: 0.75em;
+        }
+      }
+
+      #foursails p {
+        text-align: justify;
+      }
+
+      #foursails #team p {
+        padding: 0 20px;
+        font-size: inherit;
+        line-height: inherit;
+      }
+
+      #foursails .modal .wrapper {
+        max-width: 40%;
+      }      
+
+      #foursails .modal h2 {
+        color: inherit;
+      }
+
+      #foursails input, 
+      #foursails textarea, 
+      #foursails input.form-control, 
+      #foursails textarea.form-control, 
+      #foursails input.form-control:focus, 
+      #foursails textarea.form-control:focus {
+        padding-right: 15px;
+      }
+
+      #foursails #footer {
+        padding: 50px;
+      }
+    </style>
+  </head>
+
+  <body id="foursails">
+    <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <span>
+            <img src="img/logo.png" alt="logo">
+            Foursails
+          </span>
+          <span>
+            Technology Group
+          </span>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <!-- This hidden one just makes scrollspy reset when going above the team section -->
+          <li style="display: none;"><a href="#home"></a></li>
+          <li><a class="scroll" href="#consulting"><i class="icon-briefcase"></i>CONSULTING<span class="arrow-left"></span></a></li>
+          <li><a class="scroll" href="#team"><i class="icon-user"></i>TEAM<span class="arrow-left"></span></a></li>
+          <li><a class="scroll" href="#contact"><i class="icon-comments"></i>CONTACT<span class="arrow-left"></span></a></li>
+        </ul>
+      </div>
+    </div>
+    
+    
+    <!-- Home Section -->
+    <div id="home" class="section">
+      <div class="container">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <!-- <li data-target="#carousel-example-generic" data-slide-to="1"></li> -->
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <a href="//360.foursails.co" class="image-wrapper">
+                <img src="img/bluesky.png" alt="Blue Sky, Sweet Rain" /> 
+                <span class="overlay"><span class="valign"></span><i class="icon-link"></i></span>                    
+              </a>
+              <div class="carousel-caption">
+                <h2>
+                  Blue Sky, Sweet Rain
+                </h2>
+                <p>
+                  Cutting edge interactive 360 video. Source available in GitHub.
+                </p>
+              </div>
+            </div>
+            <!-- <div class="item">
+              <a href="#" class="image-wrapper">
+                <img src="img/sintel-snowscape.jpg" class="img-responsive" alt="placeholder">                                  
+                <span class="overlay"><span class="valign"></span><i class="icon-link"></i></span>                    
+              </a>
+              <div class="carousel-caption">
+                <h2>Sintel Snowscape</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              </div>
+            </div> -->
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"><i class="icon-angle-left"></i></a>
+          <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"><i class="icon-angle-right"></i></a>
+        </div>
+        
+      </div>
+    </div>
+    
+    <!-- consulting portfolio -->
+    <div id="consulting" class="section">
+      <div class="fixed-wrapper"><h1 class="affix-top">Consulting</h1></div>
+      <div class="container">      
+        <div class="row masonry-grid" style="position: relative; height: 811px;">
+          <div class="col-md-4 col-sm-4 col-xs-12 item" style="position: absolute; left: 0px; top: 0px; opacity: 1;">
+            <div id="bluesky" class="item-wrapper block">
+              <a href="//360.foursails.co/" target="_blank" class="image">
+                <img src="img/bluesky.png" alt="Blue Sky, Sweet Rain"> 
+                <span class="overlay"><span class="valign"></span><i class="icon-play"></i></span>              
+              </a>
+              <div class="description block">
+                <h3>Blue Sky, Sweet Rain</h3>
+                <p>
+                  Foursails teamed up with Carrousel to create a first-of-its-kind interactive 360 
+                  video experience using the cutting edge of the HTML 5 WebAudio API.
+                </p>
+              </div>                        
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team Section -->
+    <div id="team" class="section">
+      <div class="fixed-wrapper"><h1>Team</h1></div>
+      <div class="container">
+        
+        <div class="content">
+          <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="team-portrait block">              
+                <div class="title">
+                  <h2>Matt Davis</h2>
+                  <h3 class="italic">CEO and Lead Developer</h3>
+                </div>
+                <div class="portrait">
+                  <a href="mailto:matt.davis@foursails.co">
+                    <img src="img/matt.jpg" alt="Matt">              
+                    <span class="overlay"><span class="valign"></span><i class="icon-envelope"></i></span>                    
+                  </a>
+        		    </div>
+                <p>
+                  Matt has almost 10 years of development experience and is 
+                  passionate about using his skills to glorify Jesus Christ.
+                </p>
+                <div class="social-media">
+                  <a href="https://github.com/davismj" target="_blank" data-toggle="tooltip" title="github"><i class="icon-github"></i></a>
+                  <a href="http://stackexchange.com/users/2248153/matthew-james-davis" target="_blank" data-toggle="tooltip" title="stackoverflow"><i class="icon-stackexchange"></i></a>
+                  <a href="https://www.linkedin.com/profile/view?id=253846833" target="_blank" data-toggle="tooltip" title="linkedin"><i class="icon-linkedin"></i></a>
+               	  <span class="stretch"></span>
+        			 </div>
+              </div>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="section">
+      <div class="fixed-wrapper"><h1 class="affix-top">Contact Us</h1></div>
+      <div class="container">
+        <div class="content">
+          <form role="form" action="//www.foursails.co/contact.php" method="post">
+            <div class="form-group">
+              <input type="text" class="form-control" id="exampleInputName" placeholder="Full Name" name="name">
+              <label for="exampleInputName"><i class="icon-tag"></i></label>
+              <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="email" required>
+              <label for="exampleInputEmail1"><i class="icon-inbox"></i></label>
+              <div class="clearfix"></div>
+            </div>
+            <div class="form-group textarea">
+              <textarea rows="6" class="form-control" id="exampleInputMessage" placeholder="Write Message" name="message" required></textarea>
+              <label for="exampleInputMessage"><i class="icon-pencil"></i></label>
+              <div class="clearfix"></div>
+            </div>
+            <button type="submit" class="btn btn-large">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>    
+
+    <!-- footer -->
+    <div id="footer" class="section">
+      Copyright 2014 Foursails Technology Group LLC
+    </div>
+
+    <!-- message sent modal -->
+    <div class="modal fade" id="message-sent" tabindex="-1" role="dialog">
+      <div class="wrapper">
+        <h2 class="modal-title">Your message has been sent!</h2>
+        <p class="modal-body">
+          Thanks for sending us a message. A Foursails team member will be in touch with you soon.
+        </p>
+      </div>
+    </div>
+
+    <!-- javascript -->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+    <script src="js/init.js"></script>
+    <script>
+      $('form').submit(function(event) {
+        var form = this;
+        event.preventDefault();
+        $.ajax({
+            url: "//www.foursails.co/contact.php",
+            type: 'POST',
+            data: $(form).serialize(),
+            success: function() {
+              form.reset();
+              $('#message-sent').modal('show');
+            }
+        });
+        return false;
+      });
+    </script>
+  </body>
+</html>
