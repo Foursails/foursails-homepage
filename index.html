@@ -4,7 +4,7 @@ title: Home
 ---
 <!-- about us something or other -->
 <div class="posts">
-  {% for post in site.posts %}
+  {% for post in site.posts reversed %}
     <article class="post">    
 
       <!-- thumbnail -->
@@ -17,7 +17,8 @@ title: Home
       
       <!-- blurb -->
       <div>{{ post.blurb }}</div>
-      
+    
+      <div class="overlay"></div>
     </article>
   {% endfor %}
 </div>

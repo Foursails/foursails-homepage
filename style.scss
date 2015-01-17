@@ -11,18 +11,18 @@
 @import "_animation";
 // Syntax highlighting @import is at the bottom of this file
 
-html {
+body {
   font-family: $font-stack;
-  color: #333;
+  color: $text-white;
 }
 
 nav { 
   background: $bg-dark;
+  font-weight: bold;  
   a {
     @include transition('color 0.3s, background 0.3s');
     text-decoration: none;
-    color: $text-dark;
-    font-weight: bold;  
+  color: $text-dark;
     display: block;
   }
   .nav-link {
@@ -62,13 +62,15 @@ header {
   font-size: 40px;
   height: 75px;
   line-height: 75px;
-  background: #fff;
+  background: white;
+  font-weight: bold;
 }
 main {
   position: absolute; top: 75px; right: 0; bottom: 0; left: 260px;
-  @include padded($unit*4);
+  padding: $unit*4;
   border-top: 2px solid #ddd;
   background: $bg-white;
+  overflow-y: auto;
 }
 
 .posts {
@@ -76,21 +78,54 @@ main {
 }
 
 .post { 
-  width: $unit*40;
+  width: $unit*35;
   padding: $unit*2;
+  margin: 0 $unit*4 $unit*4 0;
   background: #fff;
   border-radius: $unit*2;
   float: left;
+  cursor: pointer;
+  position: relative;
   a > img {
     max-width: 100%;
   }
   h1 {
     margin: $unit*2 0;
     font-size: $text-xl;
+    font-weight: bold;
   }
   div {
     font-size: $text-md;
     color: $text-dark;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: $unit*2;
+    background: $bg-dark-highlight;
+    opacity: 0.2;
+    display:none;
+    pointer-events: none;
+  }
+}
+.post:hover {
+  .overlay {
+    display: block;
+  }
+}
+
+article {
+  p {
+    line-height: $text-xl;
+  }
+  p + p {
+    margin-top: $text-xl;
+  }
+  br {
+    line-height: $text-xl;
   }
 }
 

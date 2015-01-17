@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Portfolio
-permalink: /portfolio/
+title: Blog
+permalink: /blog/
 ---
 <div class="posts">
 	<!-- about we're a consulting company thats awesome -->
 	<!-- highlights and links to projects and blogs -->
   {% for post in site.posts %}
-    {% if post.category == 'portfolio' %}
+    {% if post.category == 'blog' %}
     <article class="post">    
       
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
