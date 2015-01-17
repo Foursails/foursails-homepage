@@ -3,18 +3,30 @@
 // VARIABLES
 //
 
-// Colors
-$bg-dark: #222222;
-$bg-light: #252733;
-$bg-white: #eeeeee;
-
-// Font stacks
-$montserrat: 'Montserrat', Arial, Helvetica, sans-serif;
-
-// Unit
+// unit
 $unit: 8px;
 
-// Mobile breakpoints
+// colors 
+$bg-dark: #252733;
+$text-dark: #999;
+$bg-dark-highlight: #191b24;
+$text-dark-highlight: #fff;
+$bg-light: #393e5a;
+$text-light: #fff;
+$bg-white: #eee;
+
+
+// fonts
+$font-stack: 'Montserrat', Arial, Helvetica, sans-serif;
+$font-size: 2 * $unit;
+$text-xs: $font-size * 0.6;
+$text-sm: $font-size * 0.8;
+$text-md: $font-size;
+$text-lg: $font-size * 1.2;
+$text-xl: $font-size * 1.4;
+
+
+// breakpoints
 @mixin mobile {
   @media screen and (max-width: 640px) {
     @content;

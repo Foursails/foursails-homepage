@@ -12,16 +12,20 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
+    
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl }}/feed.xml" />
   </head>
 
   <body>
-    <nav style="position: absolute; top: 0; bottom: 0; left: 0; width: 250px;">
+    <nav style="position: absolute; top: 0; bottom: 0; left: 0; width: 260px;">
       <a class="nav-logo" href="/">
-        <img src="images/logo.png " />
-        Foursails Technology Group
+        <img src="/images/logo.png " />
+        <div>
+          <div>Foursails</div>
+          <div>Technology Group</div>
+        </div>
       </a>
       <a class="nav-link" href="/portfolio">Portfolio</a>
       <a class="nav-link" href="/blog">Blog</a>
@@ -29,7 +33,10 @@
       <a class="nav-link" href="/contact">Contact</a>
     </nav>
 
-    <main style="position: absolute; top: 0; right: 0; bottom: 0; left: 250px;">
+    <header>
+      {{ page.title }}
+    </header>
+    <main>
       {{ content }}
     </main>
   </body>

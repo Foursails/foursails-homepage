@@ -1,14 +1,14 @@
 @mixin padded-top($px) {
-	padded-top: $px;
+	padding-top: $px;
 }
 @mixin padded-right($px) {
-	padded-right: $px;
+	padding-right: $px;
 }
 @mixin padded-bottom($px) {
-	padded-bottom: $px;
+	padding-bottom: $px;
 }
 @mixin padded-left($px) {
-	padded-left: $px;
+	padding-left: $px;
 }
 @mixin padded-v($px) {
 	@include padded-top($px);
@@ -23,16 +23,16 @@
 	@include padded-h($px);	
 }
 @mixin spaced-top($px) {
-	spaced-top: $px;
+	margin-top: $px;
 }
 @mixin spaced-right($px) {
-	spaced-right: $px;
+	margin-right: $px;
 }
 @mixin spaced-bottom($px) {
-	spaced-bottom: $px;
+	margin-bottom: $px;
 }
 @mixin spaced-left($px) {
-	spaced-left: $px;
+	margin-left: $px;
 }
 @mixin spaced-v($px) {
 	@include spaced-top($px);
@@ -45,4 +45,10 @@
 @mixin spaced($px) {
 	@include spaced-v($px);
 	@include spaced-h($px);	
+}
+
+@mixin grid {
+  content: "";
+  display: table;
+  clear: both;
 }

@@ -7,28 +7,92 @@
 
 @import "_reset";
 @import "_variables";
+@import "_layout";
+@import "_animation";
 // Syntax highlighting @import is at the bottom of this file
 
 html {
-  font-family: $montserrat;
+  font-family: $font-stack;
+  color: #333;
 }
 
 nav { 
-  .nav-link {
-    width:100%;
-    height: 60px;
-    line-height:60px;
-    font-weight: bold;
+  background: $bg-dark;
+  a {
+    @include transition('color 0.3s, background 0.3s');
+    text-decoration: none;
+    color: $text-dark;
+    font-weight: bold;  
     display: block;
   }
+  .nav-link {
+    height: $unit*10;
+    line-height: $unit*10;
+    text-align: center;
+    font-size: $text-xl;
+  }
+  .nav-link:hover {
+    color: $text-dark-highlight;
+    background: $bg-dark-highlight;
+  }
   .nav-logo {
-    @extend .nav-link;
+    @include padded-v($unit*1.5);
+    @include padded-h($unit);
+    color: $text-light;
+    background: $bg-light;
     img {
-      
+      @include spaced-right($unit);
+      vertical-align: middle;
+      float: left;
+    }
+    div {
+      div:first-child {
+        font-size: 32px;
+      }
+      div:last-child {
+        font-size: $text-lg;
+      }
     }
   }
 }
 
+header {
+  position: absolute; top: 0; right: 0; height: 75px; left: 260px;
+  @include padded-h($unit*4);
+  font-size: 40px;
+  height: 75px;
+  line-height: 75px;
+  background: #fff;
+}
+main {
+  position: absolute; top: 75px; right: 0; bottom: 0; left: 260px;
+  @include padded($unit*4);
+  border-top: 2px solid #ddd;
+  background: $bg-white;
+}
+
+.posts {
+  @include grid;
+}
+
+.post { 
+  width: $unit*40;
+  padding: $unit*2;
+  background: #fff;
+  border-radius: $unit*2;
+  float: left;
+  a > img {
+    max-width: 100%;
+  }
+  h1 {
+    margin: $unit*2 0;
+    font-size: $text-xl;
+  }
+  div {
+    font-size: $text-md;
+    color: $text-dark;
+  }
+}
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
