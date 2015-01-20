@@ -7,16 +7,21 @@ permalink: /blog/tagged/kyu/
 
   {% for post in site.posts %}
   	{% if post.tags contains "kyu" %}  
-	    <article class="post">        
-	      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+	    <div class="post">    
 
-	      <div class="entry">
-	        {{ post.content | truncatewords:40}}
-	      </div>
+	      <!-- thumbnail -->
+	      <a href="{{ post.url }}">
+	        <img class="post-thumb" src="/images/{{ post.thumb }}" />
+	      </a>
+
+	      <!-- title -->
+	      <h1>{{ post.title }}</h1>
 	      
-	      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+	      <!-- blurb -->
+	      <div>{{ post.blurb }}</div>
 	    
-	    </article>
+	      <div class="overlay"></div>
+	    </div>  
   	{% endif %}
   {% endfor %}
 </div>
