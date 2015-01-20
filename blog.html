@@ -4,20 +4,23 @@ title: Blog
 permalink: /blog/
 ---
 <div class="posts">
-	<!-- about we're a consulting company thats awesome -->
-	<!-- highlights and links to projects and blogs -->
-  {% for post in site.posts %}
-    {% if post.category == 'blog' %}
-    <article class="post">    
-      
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+  {% for post in site.posts reversed %}
+    {% if post.category == "blog" %}
+    <div class="post">    
 
-      <div class="entry">
-        {{ post.content | truncatewords:40}}
-      </div>
+      <!-- thumbnail -->
+      <a href="{{ post.url }}">
+        <img class="post-thumb" src="/images/{{ post.thumb }}" />
+      </a>
+
+      <!-- title -->
+      <h1>{{ post.title }}</h1>
       
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
+      <!-- blurb -->
+      <div>{{ post.blurb }}</div>
+    
+      <div class="overlay"></div>
+    </div>  
     {% endif %}
   {% endfor %}
 </div>

@@ -36,8 +36,12 @@
     <header>
       {{ page.title }}
     </header>
+    
     <main>
       {{ content }}
     </main>
+
+    {% include analytics.html %}
+    
   </body>
 </html>

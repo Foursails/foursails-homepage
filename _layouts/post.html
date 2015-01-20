@@ -1,4 +1,10 @@
 ---
 layout: default
 ---
-{{ content }}
+<article>
+	{{ content }}
+</article>
+
+<footer>
+	{% include disqus.html disqus_identifier=page.disqus_identifier %}
+</footer>
