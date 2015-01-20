@@ -7,19 +7,19 @@ permalink: /portfolio/
   {% for post in site.posts reversed %}
     {% if post.category == "portfolio" %}
     <div class="post">    
-
-      <!-- thumbnail -->
       <a href="{{ post.url }}">
-        <img class="post-thumb" src="/images/{{ post.thumb }}" />
-      </a>
 
-      <!-- title -->
-      <h1>{{ post.title }}</h1>
+        <!-- thumbnail -->
+        <img class="post-thumb" src="/images/{{ post.thumb }}" />
+
+        <!-- title -->
+        <h1>{{ post.title }}</h1>
+        
+        <!-- blurb -->
+        <div>{{ post.blurb }}</div>
       
-      <!-- blurb -->
-      <div>{{ post.blurb }}</div>
-    
-      <div class="overlay"></div>
+        <div class="overlay"></div>
+      </a>
     </div>  
     {% endif %}
   {% endfor %}

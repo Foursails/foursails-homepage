@@ -5,20 +5,20 @@ title: Home
 <!-- about us something or other -->
 <div class="posts">
   {% for post in site.posts reversed %}
-    <div class="post">    
-
-      <!-- thumbnail -->
+    <div class="post">  
       <a href="{{ post.url }}">
+        
+        <!-- thumbnail -->
         <img class="post-thumb" src="/images/{{ post.thumb }}" />
-      </a>
 
-      <!-- title -->
-      <h1>{{ post.title }}</h1>
+        <!-- title -->
+        <h1>{{ post.title }}</h1>
+        
+        <!-- blurb -->
+        <div>{{ post.blurb }}</div>
       
-      <!-- blurb -->
-      <div>{{ post.blurb }}</div>
-    
-      <div class="overlay"></div>
+        <div class="overlay"></div>
+      </a>
     </div>  
   {% endfor %}
 </div>
