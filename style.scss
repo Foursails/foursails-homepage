@@ -118,7 +118,12 @@ main {
 }
 
 article {
-  p {
+  h1 {
+    font-size: $text-xl;
+    font-weight: bold;
+    margin: $unit*2 0 $unit 0;
+  }
+  p, ol {
     line-height: $text-xl;
   }
   p + p {
@@ -127,6 +132,17 @@ article {
   br {
     line-height: $text-xl;
   }
+  ul, ol {
+    margin: $unit 0 $unit $unit*5;
+    list-style-type: decimal;
+  }
+  a {
+    color: initial;
+  }
+}
+
+footer {
+  margin-top: $unit*2;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
