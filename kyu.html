@@ -1,27 +1,6 @@
 ---
-layout: default
-title: Blog
+layout: posts
+title: Kyu Game Development Blog
+tag: kyu
 permalink: /blog/tagged/kyu/
 ---
-<div class="posts">
-
-  {% for post in site.posts %}
-  	{% if post.tags contains "kyu" %}  
-      <a href="{{ post.url }}">
-		    <div class="post">    
-
-		      <!-- thumbnail -->
-        	<img class="post-thumb" src="/images/{{ post.thumb }}" />
-
-		      <!-- title -->
-		      <h1>{{ post.title }}</h1>
-		      
-		      <!-- blurb -->
-		      <div>{{ post.blurb }}</div>
-		    
-		      <div class="overlay"></div>
-		    </div>  
-		  </a>
-  	{% endif %}
-  {% endfor %}
-</div>

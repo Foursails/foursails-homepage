@@ -1,0 +1,29 @@
+---
+layout: default
+title: Foursails Team
+permalink: /team/
+---
+<div class="team">
+	{% for member in site.data.team %}
+		<div class="member">
+			<img src="{{ site.baseurl }}{{ member.avatar }}" />
+			<h1>{{ member.name }}</h1>
+			<h2>{{ member.role }}</h2>
+			<div class="body">{{ member.bio }}</div>
+			<div class="links">
+				{% if member.email %}
+					<a href="mailto:{{ member.email }}"><i class="fa fa-envelope"></i></a>
+				{% endif %}
+				{% if member.github %}
+					<a href="http://github.com/{{ member.github }}"><i class="fa fa-github"></i></a>
+				{% endif %}
+				{% if member.stackoverflow %}
+					<a href="http://stackoverflow.com/users/{{ member.stackoverflow }}"><i class="fa fa-stack-overflow"></i></a>
+				{% endif %}
+				{% if member.linkedin %}
+					<a href="https://www.linkedin.com/profile/view?id={{ member.linkedin }}"><i class="fa fa-linkedin"></i></a>
+				{% endif %}
+			</div>
+		</div>
+	{% endfor %}
+</div>

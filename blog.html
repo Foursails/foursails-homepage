@@ -1,26 +1,6 @@
 ---
-layout: default
+layout: posts
 title: Blog
+category: blog
 permalink: /blog/
 ---
-<div class="posts">
-  {% for post in site.posts reversed %}
-    {% if post.category == "blog" %}
-    <div class="post">    
-      <a href="{{ post.url }}">
-
-        <!-- thumbnail -->
-        <img class="post-thumb" src="/images/{{ post.thumb }}" />
-
-        <!-- title -->
-        <h1>{{ post.title }}</h1>
-        
-        <!-- blurb -->
-        <div>{{ post.blurb }}</div>
-      
-        <div class="overlay"></div>
-      </a>
-    </div>  
-    {% endif %}
-  {% endfor %}
-</div>
