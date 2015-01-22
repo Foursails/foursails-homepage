@@ -3,22 +3,22 @@ layout: default
 ---
 <div class="posts">
   {% for post in site.posts reversed %}
-  {% if post.category == page.category or post.tags contains page.tag or (page.category == nil and page.tag == nil) %}
-    <div class="post">  
-      <a href="{{ post.url }}">
-        
-        <!-- thumbnail -->
-        <img class="post-thumb" src="/images/{{ post.thumb }}" />
+    {% if post.category == page.category or post.tags contains page.tag or (page.category == nil and page.tag == nil) %}
+      <div class="post">  
+        <a href="{{ post.url }}">
+          
+          <!-- thumbnail -->
+          <img class="post-thumb" src="/images/{{ post.thumb }}" />
 
-        <!-- title -->
-        <h1>{{ post.title }}</h1>
+          <!-- title -->
+          <h1>{{ post.title }}</h1>
+          
+          <!-- blurb -->
+          <div class="body">{{ post.blurb }}</div>
         
-        <!-- blurb -->
-        <div class="body">{{ post.blurb }}</div>
-      
-        <div class="overlay"></div>
-      </a>
-    </div>  
+          <div class="overlay"></div>
+        </a>
+      </div>  
     {% endif %}
   {% endfor %}
 </div>
