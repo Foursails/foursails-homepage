@@ -74,7 +74,7 @@ main {
 }
 
 .posts, .team {
-  @include grid;
+  // @include grid;
 }
 
 .post, .member { 
@@ -83,7 +83,7 @@ main {
   margin: 0 $unit*4 $unit*4 0;
   background: #fff;
   border-radius: $unit*2;
-  float: left;
+  // float: left;
   position: relative;
   a {
     color: inherit;
