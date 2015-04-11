@@ -17,7 +17,7 @@ We're going to create a simple demo that allows us to write and preview markdown
 
 Many HTML elements come with attributes that affect how the element looks or behaves. A common example is the `<input />` element. Without any attributes, the `<input />` element is a simple text box. However, if we modify the type attribute `<input type="button" />`, the input element becomes a button. Using an attribute allows us to describe the look and behavior of the element without writing any code.
 
-One of the hallmarks of a well written Aurelia application is a clear *separation of concerns*; everything that describes the logic of our application should be in code and shouldn't need to know about our HTML, and everything that describes the look and behavior of our application should be in our HTML and shouldn't need to know about the logic behind it. To help us achieve this, Aurelia allows us to define new HTML attributes, called **Custom Attributes**, that work similarly to HTML attributes. Once we define a Custom Attribute in code we can use it throughout our HTML without writing any additional code.
+One of the hallmarks of a well written Aurelia application is a clear *separation of concerns*; the code that describes the logic of our application should not need to know about the specifics of where and how it is used. To help us achieve this, Aurelia allows us to define new HTML attributes, called **Custom Attributes**, that work similarly to HTML attributes. Once we define a Custom Attribute in code we can use it throughout our HTML without writing any additional code.
 
 #How to write a Custom Attribute
 
