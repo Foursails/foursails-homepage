@@ -109,7 +109,7 @@ module.exports = {
 ```
 
 #Adding the build task
-Finally, we add a new `build-css` task to gulp. Since the task builds css, we will include it with our other build tasks in the `build/tasks/build.js` file. 
+Finally, we add a new `build-css` task to gulp. Since the task builds css, we will include it with our other build tasks in the `build/tasks/build.js` file. We will also make sure that the watch task in the `build/tasks.watch.js` knows about our new `build-css` task.
 
 ####build/tasks/build.js
 ```javascript
@@ -132,8 +132,8 @@ gulp.task('build-css', function() {
     // restart the gulp watch task.
     .pipe(plumber())
 
-    // The changed step will communicate to browser sync when the source 
-    // files change, signaling a refresh.
+    // The changed step will analyze which files have changed and require
+    // rebuilding.
     .pipe(changed(paths.output, {extension: '.css'}))
 
     // The sourcemaps step will automatically generate sourcemaps.
@@ -159,6 +159,14 @@ gulp.task('build', function(callback) {
     ['build-system', 'build-html', 'build-css'],
     callback
   );
+});
+```
+
+####build/tasks/watch.js
+```javascript
+gulp.task('watch', ['serve'], function() {
+  ...
+  gulp.watch(paths.style, ['build-css', browserSync.reload).on('change', reportChange);
 });
 ```
 
