@@ -47,8 +47,35 @@
 	@include spaced-h($px);	
 }
 
-@mixin grid {
-  content: "";
-  display: table;
-  clear: both;
+@mixin col {
+	float: left; 
+	box-sizing: border-box;
+}
+
+.row { 
+	content: "";
+  	display: table;
+  	clear: both;
+  	width: 100%;
+}
+
+.row + .row {
+	margin-top: $unit;
+}
+
+.col-1-2 { 
+	@include col;
+	width: 50%;
+}
+
+[class^="col"] + [class^="col"] {
+	padding-left: $unit;
+}
+
+.full-width { 
+	width: 100%;
+}
+
+.align-right {
+	text-align: right;
 }

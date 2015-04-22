@@ -31,7 +31,8 @@ nav {
     text-align: center;
     font-size: $text-xl;
   }
-  .nav-link:hover {
+  .nav-link:hover,
+  .nav-link.is-selected {
     color: $text-dark-highlight;
     background: $bg-dark-highlight;
   }
@@ -179,6 +180,18 @@ article {
   div.highlight {
     margin: 0;
     background:white;
+  }
+}
+
+form {
+  input,
+  textarea {
+    font-family: inherit;
+    font-size: $text-md;
+    display: block;
+    padding: $unit;
+    border-radius: $unit;
+    border: 0;
   }
 }
 
