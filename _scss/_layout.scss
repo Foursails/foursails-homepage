@@ -1,46 +1,22 @@
-@mixin padded-top($px) {
+@mixin padded-v($px) {
 	padding-top: $px;
-}
-@mixin padded-right($px) {
-	padding-right: $px;
-}
-@mixin padded-bottom($px) {
 	padding-bottom: $px;
 }
-@mixin padded-left($px) {
-	padding-left: $px;
-}
-@mixin padded-v($px) {
-	@include padded-top($px);
-	@include padded-bottom($px);	
-}
 @mixin padded-h($px) {
-	@include padded-left($px);
-	@include padded-right($px);	
+	padding-left: $px;
+	padding-right: $px;
 }
 @mixin padded($px) {
 	@include padded-v($px);
 	@include padded-h($px);	
 }
-@mixin spaced-top($px) {
+@mixin spaced-v($px) {
 	margin-top: $px;
-}
-@mixin spaced-right($px) {
-	margin-right: $px;
-}
-@mixin spaced-bottom($px) {
 	margin-bottom: $px;
 }
-@mixin spaced-left($px) {
-	margin-left: $px;
-}
-@mixin spaced-v($px) {
-	@include spaced-top($px);
-	@include spaced-bottom($px);	
-}
 @mixin spaced-h($px) {
-	@include spaced-left($px);
-	@include spaced-right($px);	
+	margin-left: $px;
+	margin-right: $px;
 }
 @mixin spaced($px) {
 	@include spaced-v($px);
@@ -68,7 +44,7 @@
 	width: 50%;
 }
 
-[class^="col"] + [class^="col"] {
+[class*="col-"] + [class*="col-"] {
 	padding-left: $unit;
 }
 

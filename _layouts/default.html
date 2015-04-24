@@ -17,12 +17,13 @@
     
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="stylesheet" type="text/css" href="/style.css" media="screen and (min-width: 641px)" />
+    <link rel="stylesheet" type="text/css" href="/mobile.css" media="screen and (max-width: 640px)" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl }}/feed.xml" />
   </head>
 
   <body>
-    <nav style="position: absolute; top: 0; bottom: 0; left: 0; width: 260px;">
+    <nav>
       <a class="nav-logo" href="/">
         <img src="/images/logo.png " />
         <div>
@@ -37,7 +38,7 @@
     </nav>
 
     <header>
-      {{ page.title }}
+      <span>{{ page.title }}</span>
     </header>
     
     <main>
@@ -45,6 +46,21 @@
     </main>
 
     {% include analytics.html %}
+
+    <script>
+      var el = document.querySelector('.nav-logo'); 
+      el.addEventListener('click', function(ev) {
+        if (el.parentElement.classList.contains('is-expanded')) {
+          el.parentElement.classList.remove('is-expanded');
+        } else {
+          el.parentElement.classList.add('is-expanded');
+        }
+        if (screen.width < 640) {
+          ev.preventDefault();
+          return false;
+        }
+      });
+    </script>
     
   </body>
 </html>

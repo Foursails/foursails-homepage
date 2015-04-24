@@ -14,15 +14,18 @@
 body {
   font-family: $font-stack;
   color: $text-white;
-  @include mobile {
-    max-width: 100%;
-  }
+  max-width: 100%;
 }
 
 nav { 
   background: $bg-dark;
   font-weight: bold;  
-  position: absolute; top: 0; bottom: 0; left: 0; width: 260px;
+  position: absolute; top: 0; left: 0;
+  width: 100%;
+  overflow: hidden;
+  @include transition('max-height 0.3s');
+  max-height: 203px;
+
   a {
     @include transition('color 0.3s, background 0.3s');
     text-decoration: none;
@@ -30,10 +33,10 @@ nav {
     display: block;
   }
   .nav-link {
-    height: $unit*10;
-    line-height: $unit*10;
+    width: 100%;
     text-align: center;
-    font-size: $text-xl;
+    font-size: $text-lg;
+    line-height: $unit*4;
   }
   .nav-link:hover,
   .nav-link.is-selected {
@@ -58,24 +61,34 @@ nav {
       div:last-child {
         font-size: $text-lg;
       }
-      @include mobile {
-        display: none;
-      }
+      display: none;
     }
   }
 }
 
+nav:not(.is-expanded) {
+  max-height: 75px;
+}
+nav.is-expanded ~ main {
+  padding-top: 128px + $unit*2;
+}
+
 header {
-  position: absolute; top: 0; right: 0; height: 75px; left: 260px;
-  @include padded-h($unit*4);
-  font-size: 40px;
-  height: 75px;
-  line-height: 75px;
+  position: absolute; top: 0; right: 0; left: 68px; 
+  height: 75px; 
+  @include padded-h($unit*2);
+  font-size: 24px;
+  line-height: 36px;
   background: white;
   font-weight: bold;
+  text-overflow: ellipses;
+  overflow: hidden;
 }
 main {
-  position: absolute; top: 75px; right: 0; bottom: 0; left: 260px;
+  @include transition('padding 0.3s');
+  position: absolute; top: 75px; right: 0; bottom: 0; left: 0px;
+  z-index: -1;
+
   padding: $unit*2 $unit*4;
   border-top: 2px solid #ddd;
   background: $bg-white;
@@ -87,7 +100,7 @@ main {
 }
 
 .post, .member { 
-  width: $unit*35;
+  width: 100%;
   padding: $unit*2;
   margin: 0 $unit*4 $unit*4 0;
   background: #fff;
