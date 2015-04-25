@@ -3,7 +3,7 @@ layout: post
 
 title: Deploy Aurelia to GitHub Pages
 author: Matt Davis
-thumb: blog/2015-4-24-deploy-to-gh-pages.png
+thumb: blog/2015-4-24-deploy-to-gh-pages.jpg
 blurb: How to quickly deploy your new Aurelia app to GitHub pages.
 
 category: blog
