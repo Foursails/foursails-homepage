@@ -84,8 +84,8 @@ As Talves noted, this is not how you want to deploy your production application.
 
 #Links
 [StackOverflow post from which this blog was derived](http://stackoverflow.com/questions/29831885/how-to-deploy-aurelia-to-github-pages-gh-pages#29858036)
-[GitHub Pages](https://help.github.com/articles/user-organization-and-project-pages/)
-[GitHub Pages with Jekyll](https://help.github.com/articles/using-jekyll-with-pages/)
-[git Documentation](http://git-scm.com/documentation)
-[TortoiseGit](https://code.google.com/p/tortoisegit/)
-[Demo](http://davismj.github.io/skeleton-navigation/)
+[GitHub Pages](https://help.github.com/articles/user-organization-and-project-pages/)<br/>
+[GitHub Pages with Jekyll](https://help.github.com/articles/using-jekyll-with-pages/)<br/>
+[git Documentation](http://git-scm.com/documentation)<br/>
+[TortoiseGit](https://code.google.com/p/tortoisegit/)<br/>
+[Demo](http://davismj.github.io/skeleton-navigation/)<br/>
