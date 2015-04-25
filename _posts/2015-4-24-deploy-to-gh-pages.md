@@ -25,7 +25,7 @@ First, we are going to clone the newly forked repo locally. The first step will 
 
 Click the navigation bar and type `cmd` to open the command line.
 
-![Opening a command window from the Windows Explorer](/images/blog/2015-04-24-ss1.png)
+![Opening a command window from the Windows Explorer](/images/blog/2015-4-24-ss1.png)
 
 Type `git clone https://github.com/your-username/skeleton-navigation` to clone the repo at this location. Make sure you use the correct url for your repo.
 
@@ -59,7 +59,7 @@ Your new project will be hosted at your-username.github.io/skeleton-navigation.
 
 First, we are going to clone the newly forked repo locally. The first step will be to navigate to the folder where we will want to clone the repo locally. Right click within the folder and click "Git Clone". Make sure that the URL is set to the URL of your Repo and the Directory is set to the desired directory.
 
-![Git Clone dialog](/images/blog/2015-04-24-ss2.png)
+![Git Clone dialog](/images/blog/2015-4-24-ss2.png)
 
 Because we are using the skeleton-navigation project, we will need to install the dependencies and build the project. To do this, open a command prompt in the project directory and type `npm install -g gulp jspm`, then `npm install`, then `jspm install -y`, then `gulp build`.
 
