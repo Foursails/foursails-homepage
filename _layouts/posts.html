@@ -8,8 +8,10 @@ layout: default
         <a href="{{ post.url }}">
           
           <!-- thumbnail -->
+          {% if post.thumb %}
           <img class="post-thumb" src="/images/{{ post.thumb }}" />
-
+          {% endif %}
+          
           <!-- title -->
           <h1>{{ post.title }}</h1>
           
