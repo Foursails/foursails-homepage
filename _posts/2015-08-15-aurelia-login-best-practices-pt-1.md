@@ -14,7 +14,7 @@ published: true
 Almost everyone building an Aurelia application wants to include some form of authentication. Aurelia includes a number of powerful features for handling authentication securely and effectively. We're going to look at the concept of including multiple shells, or root view models, within an Aurelia app to keep your app logic separate from your login logic.
 
 #What is a Shell?
-The Aurelia bootstrapper is equipped to automagically get your app up and running simply by including `aurelia-app` on your body tag. However, if you'd like to customize your app initialization, you can pass a javascript file to your body tag, for example `aurelia-app="main"`, to instruct Aurelia to load in a custom intialization file.
+The shell, sometimes called the root, is the root view model of your page. The Aurelia bootstrapper is designed to automatically get your app initialized using `src/app.js` as the root. However, if you'd like to customize your app initialization, you can pass a javascript file to your body tag, for example `aurelia-app="main"`, to instruct Aurelia to load in a custom intialization file.
 
 ####src/main.js
 ```javascript
