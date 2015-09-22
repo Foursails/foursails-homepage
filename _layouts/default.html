@@ -32,7 +32,7 @@
         </div>
       </a>
       <a class="nav-link {% if page.url == '/portfolio/' %}is-selected{% endif %}" href="/portfolio/">Portfolio</a>
-      <a class="nav-link {% if page.url == '/blog/' %}is-selected{% endif %}" href="/blog/">Blog</a>
+      <a class="nav-link {% if page.url contains 'blog' %}is-selected{% endif %}" href="/blog/">Blog</a>
       <a class="nav-link {% if page.url == '/team/' %}is-selected{% endif %}" href="/team/">Team</a>
       <a class="nav-link {% if page.url == '/consulting/' %}is-selected{% endif %}" href="/consulting/">Consulting</a>
     </nav>

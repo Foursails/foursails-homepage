@@ -2,7 +2,7 @@
 layout: post
 
 title: Aurelia Custom Attributes
-author: Matt Davis
+author: Matthew James Davis
 thumb: blog/2015-4-11-customattr.png
 blurb: Introduction to custom Aurelia-enabled HTML attributes.
 
