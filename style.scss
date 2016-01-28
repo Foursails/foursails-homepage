@@ -19,6 +19,14 @@ body {
   }
 }
 
+blockquote {
+  border-left: 4px solid rgb(112, 112, 112);
+  padding-left: 2*$unit;
+  margin-bottom: 2*$unit;
+  margin-right: 2*$unit;
+  color: rgb(112, 112, 112);
+}
+
 nav { 
   background: $bg-dark;
   font-weight: bold;  
@@ -190,6 +198,12 @@ article {
   div.highlight {
     margin: 0;
     background:white;
+  }
+  p + div.highlight {
+    margin-top: $unit;
+  }
+  div.highlight + p {
+    margin-top: $unit * 2; 
   }
 }
 
