@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% include masonry.html grid=".posts" item=".post" %}
 <div class="posts">
   {% for post in site.posts %}
     {% if post.category == page.category or post.tags contains page.tag or (page.category == nil and page.tag == nil) %}
@@ -24,5 +25,3 @@ layout: default
     {% endif %}
   {% endfor %}
 </div>
-
-{% include masonry.html %}
