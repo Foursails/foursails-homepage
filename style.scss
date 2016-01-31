@@ -153,6 +153,11 @@ main {
   }
 }
 
+.lightbox {
+  text-decoration: none;
+  margin: 0 $unit;
+}
+
 article {
   h1, h2 {
     font-size: $text-xl;
@@ -176,10 +181,15 @@ article {
     line-height: $text-xl;
   }
   ul, ol {
-    margin: $unit 0 $unit $unit*5;
+    margin: $unit 0 2*$unit 0;
+    padding-left: 4*$unit;
+
+    li {
+      margin-bottom: $unit/2;
+    }
   }
   ol {
-      list-style-type: decimal;
+    list-style-type: decimal;
   }
   a {
     color: initial;
