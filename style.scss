@@ -153,9 +153,17 @@ main {
   }
 }
 
-.lightbox {
-  text-decoration: none;
-  margin: 0 $unit;
+.screenshots {
+
+  a {
+    display: inline-block;
+    margin: $unit/2;
+    text-decoration: none;
+  }
+}
+
+* + .screenshots {
+  margin-top: 2*$unit;
 }
 
 article {
@@ -181,8 +189,8 @@ article {
     line-height: $text-xl;
   }
   ul, ol {
-    margin: $unit 0 2*$unit 0;
-    padding-left: 4*$unit;
+    margin: $unit 0;
+    padding-left: 3*$unit;
 
     li {
       margin-bottom: $unit/2;
