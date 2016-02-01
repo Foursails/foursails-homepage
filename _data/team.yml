@@ -1,8 +1,24 @@
 - name: Matt Davis
-  role: Developer/Architect
+  role: "CEO, Architect"
   avatar: /images/team/matt.jpg
   github: davismj
   stackoverflow: 1981050
   email: matt.davis@foursails.co
   url: http://davismj.me/
-  bio: "Developer. Believer. Ruthlessly cooperative."
+  twitter: matthewjames
+
+- name: Blake Kandzer
+  role: Designer
+  avatar: /images/team/blake.jpg
+  email: blake@kandzer.com
+  url: http://kandzer.com/
+  linkedin: blake-kandzer-8092ba8
+  behance: KANZAR
+
+- name: Jordan Powell
+  role: Site Reliability
+  avatar: /images/team/jordan.jpg
+  email: jordanpowellmedia@gmail.com
+  twitter: jordantpowell
+  linkedin: jordanpow
+  stackoverflow: 2868474
