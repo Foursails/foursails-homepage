@@ -23,6 +23,9 @@ permalink: /team/
 				{% if member.linkedin %}
 					<a href="https://www.linkedin.com/profile/view?id={{ member.linkedin }}"><i class="fa fa-linkedin"></i></a>
 				{% endif %}
+				{% if member.url %}
+					<a href="{{ member.url }}"><i class="fa fa-link"></i></a>
+				{% endif %}
 			</div>
 		</div>
 	{% endfor %}
