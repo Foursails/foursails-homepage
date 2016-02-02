@@ -175,7 +175,7 @@ article {
   h1, h3 {
     font-weight: bold;
   }
-  h1, h2, h3, h4 {
+  h1, h2, h3 {
     margin: $unit*2 0 $unit 0!important;
   }
   p, ol {
@@ -201,26 +201,11 @@ article {
   a {
     color: initial;
   }
-  p > code {
-    background: white;
-    padding: 0 2px 2px 2px;
-    vertical-align: bottom;
-  }
   strong { 
     font-weight: bold;
   }
   em {
     font-style: italic;
-  }
-  div.highlight {
-    margin: 0;
-    background:white;
-  }
-  p + div.highlight {
-    margin-top: $unit;
-  }
-  div.highlight + p {
-    margin-top: $unit * 2; 
   }
 }
 
