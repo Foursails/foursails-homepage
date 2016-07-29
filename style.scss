@@ -190,10 +190,14 @@ article {
   ul, ol {
     margin: $unit 0;
     padding-left: 3*$unit;
+    list-style-position: inside;
 
     li {
       margin-bottom: $unit/2;
     }
+  }
+  ul {
+    list-style-type: initial;
   }
   ol {
     list-style-type: decimal;
