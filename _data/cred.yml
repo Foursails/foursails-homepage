@@ -12,7 +12,7 @@
 - company: Florida Bankers' Association
   # logo: /images/cred/fba-logo.png
 
-- company: Blue Nickel
+- company: Blue Nickel Solutions
   logo: /images/cred/bluenickel-logo.png
   avatar: /images/cred/bluenickel-avatar.jpg
   name: David Purkiss
@@ -24,9 +24,10 @@
 
 - company: EasyTerritory
 
-- company: BlueSpire
+- company: Blue Spire Consulting
   logo: /images/cred/bluespire-logo.png
   avatar: /images/cred/bluespire-avatar.jpg
   name: Rob Eisenberg
   title: President
+  ur: http://bluespire.com/
   quote: "...exceptional skill and professionalism on numerous development projects across a host of configurations."
