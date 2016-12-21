@@ -527,6 +527,9 @@ section {
 
   .overlay {
     position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     &::before {
       content: "";
@@ -546,9 +549,6 @@ section {
 
   .call {
     font-size: 2rem;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   section {
