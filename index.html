@@ -1,5 +1,243 @@
 ---
-layout: posts
-title: Home
+layout: default
 ---
-<!-- about us something or other -->
+<div id="landing">
+
+  <!-- replace bg image -->
+  <section id="welcome" class="page overlay">
+    <div class="content centered">
+
+      <!-- think craft beer. excellence, unique, delicious, made with care, attention, art, crafted not made -->
+      <!-- our usp is that we become a part of your team without the commitment -->
+      <!-- our vision is that everyone should have the right people working on the right problems towards success -->
+
+      <div class="title centered">
+        We craft distinguished solutions for your business.
+
+      </div>
+      <a class="button" href="/contact/">Let's Work Together</a>
+    </div>
+  </section>
+
+  <section id="expertise">
+    <div class="subtitle centered">
+      Your success is our success.
+    </div>
+
+    <p>Crafting exceptional software is our passion, but cultivating success is our first love. That's why we work with you to brainstorm the very best approach to your problem. Once we select a strategy, we make sure to find the right team for the project - even if that isn't us.</p>
+
+    <p>Our areas of mastery include:</p>
+
+    <ul>
+      <!-- <li>
+        <i class="fa fa-globe"></i>
+        Websites that Top Search Rankings</li> -->
+      <li>
+        <i class="fa fa-mobile pull-left"></i>
+        Designing Applications Optimized for Any Device</li>
+      <li>
+        <i class="fa fa-table pull-left"></i>
+        Replacing Excel with a Custom Database</li>
+      <!-- <li>
+        <i class="fa fa-shopping-cart pull-left"></i>
+        eCommerce and Inventory Management Applications to Increase Conversions</li> -->
+      <li>
+        <i class="fa fa-map-marker pull-left"></i>
+        Visualizing Your Data with Maps</li>
+      <!-- <li>
+        <i class="fa fa-newspaper-o pull-left"></i>
+        Content Managment Sites that Generate Traffic</li>
+      <li>
+        <i class="fa fa-users pull-left"></i>
+        CRM Enhancements to Optimize Your Sales Funnel</li> -->
+      <li>
+        <i class="fa fa-trophy pull-left"></i>
+        Reducing Churn through Gamification</li>
+      <!-- <li>
+        <i class="fa fa-database pull-left"></i>
+        Machine Learning Strategies that Automate Your Workflows</li>
+      <li>
+        <i class="fa fa-video-camera pull-left"></i>
+        Cutting-Edge Multimedia Experiences that Generate Buzz</li> -->
+      <li>
+        <i class="fa fa-lock pull-left"></i>
+        Performing Security Audits to Protect Your Data</li>
+    </ul>  
+  </section>
+
+  <section id="trust" class="call overlay">
+    <div class="subtitle">Trusted by these and other great companies</div>
+    <div id="logos">
+      {% for item in site.data.cred %}
+      {% if item.logo %}
+      <div class="cred-logo">
+        <img src="{{ item.logo }}" />
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+
+  </section>
+
+  <section id="credibility">
+
+    <div class="subtitle centered">What our partners have to say about collaborating with us</div>
+    {% for item in site.data.cred %}
+    {% if item.quote and item.avatar %}
+    <div class="reference">
+      <img class="avatar" src="{{ item.avatar }}" />
+      <div class="quote">{{ item.quote }}</div>
+      <div class="name">{{ item.name }}</div>
+      <div class="company">
+        {{ item.title }} of
+        <a href="{{ item.url }}">{{ item.company }}</a>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+    <div class="subtitle centered">A few of our creations</div>
+    <div class="posts">
+      {% for post in site.posts %}
+        {% if post.category == 'portfolio' %}
+          <div class="post">  
+            <a href="{{ post.url }}">
+            
+              <!-- thumbnail -->
+              {% if post.thumb %}
+              <img class="post-thumb" src="/images/{{ post.thumb }}" />
+              {% endif %}
+              
+              <!-- title -->
+              <h1>{{ post.title }}</h1>
+              
+              <!-- blurb -->
+              <div class="body">{{ post.blurb }}</div>
+            
+              <div class="overlay"></div>
+            </a>
+          </div>  
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% include masonry.html grid=".posts" item=".post" %}
+  </section>
+
+  <section id="roi" class="call overlay">
+    <h1 class="subtitle">
+      Applications that deliver a <strong>return on investment</strong>.
+    </h1>
+    <div class="content">
+      <a class="button" href="/contact/">Talk With Us</a>
+    </div>
+  </section>
+
+  <section id="process" class="page">
+    <div class="subtitle centered">
+      You need the best people solving your toughest problems. That's us.
+    </div>
+
+    <p>When you run into a problem that your team is not equipped to solve, we're here to fill in the gaps. We adopt your vision to craft a solution as part of one team, pursuing the goals of your business. Typically, our partners save as much 50% on hiring costs alone when they choose to collaborate with us.</p>
+
+    <p>Here's how we do it:</p>
+
+    <ol>
+      <li>
+        <i class="fa fa-file-text-o fa-2x pull-left"></i>
+        <div>
+          <a href="/contact/">Reach out to us</a> and we will get in touch with you to learn more about your needs.
+        </div>
+      </li>
+      <li>
+        <i class="fa fa-balance-scale fa-2x pull-left"></i>
+        <div>
+          We brainstorm options with you, clearly explaining what each means for your business.
+        </div>
+      </li>
+      <li>
+        <i class="fa fa-map-o fa-2x pull-left"></i>
+        <div>
+          We create a battle plan, diving the project into short-term goals with clear expectations.
+        </div>
+      </li>
+      <li>
+        <i class="fa fa-users fa-2x pull-left"></i>
+        <div>
+          Once the plan is finalized, we assemble the dream team for the project and begin development.
+        </div>
+      </li>
+      <li>
+        <i class="fa fa-line-chart fa-2x pull-left"></i>
+        <div>
+          We build in stages, keeping you informed and making sure you're satisfied every step of the way.
+        </div>
+      </li>
+      <li>
+        <i class="fa fa-repeat fa-2x pull-left"></i>
+        <div>
+          After delivery, we keep a team member available for support for as long as you may need him.
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="growth" class="call overlay">
+    <h1 class="subtitle">Software built for <strong>growth and longevity</strong>.</h1>
+    <a class="button" href="/contact/">Connect with us</a>
+  </section>
+
+  <section>
+    <div class="subtitle">Who We Are</div>
+    <div class="team">
+      {% for member in site.data.team %}
+      <div class="member">
+        <img src="{{ site.baseurl }}{{ member.avatar }}" />
+        <h1>{{ member.name }}</h1>
+        <h2>{{ member.role }}</h2>
+        <!-- <div class="body">{{ member.bio }}</div> -->
+        <div class="links">
+          {% if member.email %}
+            <a href="mailto:{{ member.email }}"><i class="fa fa-envelope"></i></a>
+          {% endif %}
+          {% if member.twitter %}
+            <a href="https://twitter.com/{{ member.twitter }}"><i class="fa fa-twitter"></i></a>
+          {% endif %}
+          {% if member.github %}
+            <a href="http://github.com/{{ member.github }}"><i class="fa fa-github"></i></a>
+          {% endif %}
+          {% if member.stackoverflow %}
+            <a href="http://stackoverflow.com/users/{{ member.stackoverflow }}"><i class="fa fa-stack-overflow"></i></a>
+          {% endif %}
+          {% if member.linkedin %}
+            <a href="https://www.linkedin.com/in/{{ member.linkedin }}"><i class="fa fa-linkedin"></i></a>
+          {% endif %}
+          {% if member.behance %}
+            <a href="https://www.behance.net/{{ member.behance }}"><i class="fa fa-behance"></i></a>
+          {% endif %}
+          {% if member.url %}
+            <a href="{{ member.url }}"><i class="fa fa-link"></i></a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.4090380102734!2d-80.14406568533857!3d26.118202983476174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d90057c24d3f55%3A0x2a42279281550d50!2sAxis+Space!5e0!3m2!1sen!2sus!4v1481721496225" height="250" frameborder="0" style="border:0;" allowfullscreen></iframe>
+
+</div>
+
+<footer class="row">
+  <div class="col-1-2">
+    <div class="title">Foursails Technology Group</div>
+    <div class="subtitle">Working Smart Since 2014</div>
+  </div>
+  <dl class="col-1-2">
+    <dt>Address</dt>
+    <dd>333 Las Olas Way, Fort Lauderdale, FL 33301</dd>
+    <dt>Email</dt>
+    <dd><a href="mailto:davismj@foursails.co">davismj@foursails.co</a></dd>
+    <dt>Phone</dt>
+    <dd><a href="tel:8503295553">(850) 329 5553</a></dd>
+  </dl>
+</footer>

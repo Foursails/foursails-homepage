@@ -1,0 +1,32 @@
+- company: Courthouse USA
+  logo: /images/cred/cusa-logo.png
+  avatar: /images/cred/cusa-avatar.jpg
+  name: Marlene Jeffers
+  title: Founder
+  url: http:/www.courthouseusa.com
+  quote: "...they were particularly good at straightening-out someone else's mess. If anyone can fix it, it would be team at Foursails."
+
+- company: OSHAB
+  # logo: /images/cred/oshab-logo.png
+
+- company: Florida Bankers' Association
+  # logo: /images/cred/fba-logo.png
+
+- company: Blue Nickel
+  logo: /images/cred/bluenickel-logo.png
+  avatar: /images/cred/bluenickel-avatar.jpg
+  name: David Purkiss
+  title: Lead Software Developer
+  url: http://bluenickel.co.za/
+  quote: "...well thought out, simple, maintainable, reusable code."
+
+- company: Carrousel
+
+- company: EasyTerritory
+
+- company: BlueSpire
+  logo: /images/cred/bluespire-logo.png
+  avatar: /images/cred/bluespire-avatar.jpg
+  name: Rob Eisenberg
+  title: President
+  quote: "...exceptional skill and professionalism on numerous development projects across a host of configurations."

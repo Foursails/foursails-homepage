@@ -3,33 +3,31 @@
 // VARIABLES
 //
 
-// unit
-$unit: 8px;
-
 // colors 
-$bg-dark: #252733;
-$text-dark: #888;
-$bg-dark-highlight: #191b24;
-$text-dark-highlight: #fff;
-$bg-light: #393e5a;
-$text-light: #fff;
-$bg-white: #eee;
-$text-white: #333;
-
+$primary-bg: #006dd9;
+$primary-text: #fff;
+$secondary-bg: #00387b;
+$secondary-text: #fff;
+$default-bg: #fcfcfc;
+$default-text: #333;
+$dark-bg: #e8e8e8;
 
 // fonts
 $font-stack: 'Montserrat', Arial, Helvetica, sans-serif;
-$font-size: 2 * $unit;
-$text-xs: $font-size * 0.6;
-$text-sm: $font-size * 0.8;
-$text-md: $font-size;
-$text-lg: $font-size * 1.2;
-$text-xl: $font-size * 1.4;
 
+// mixins
+@mixin clearfix {
+  zoom: 1;
+  overflow: hidden;
+}
 
-// breakpoints
-@mixin mobile {
-  @media screen and (max-width: 640px) {
-    @content;
-  }
+@mixin transition($transition) {
+  -webkit-transition: unquote($transition);
+  transition: unquote($transition); 
+}
+
+@mixin centered {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }

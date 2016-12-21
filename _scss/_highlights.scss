@@ -19,17 +19,15 @@ code.highlighter-rouge {
   background: white;
   font-family: 'Inconsolata', monospace;
   padding: 1px 4px 2px 4px;
+  border: 1px solid $dark-bg;
 }
 
-h4 + div.highlighter-rouge {
-  margin-top: $unit/2;
-}
-
+h4 + div.highlighter-rouge,
 p + div.highlighter-rouge {
-  margin-top: $unit;
+  margin-top: 0.2rem
 }
-div.highlighter-rouge + p {
-  margin-top: $unit * 2; 
+div.highlighter-rouge + * {
+  margin-top: 1rem;
 }
 
 .highlighter-rouge .c { color: #008000 } /* Comment */

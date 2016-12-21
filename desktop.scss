@@ -1,0 +1,215 @@
+---
+---
+
+@import "_default";
+
+html {
+  font-size: 15px;
+}
+
+body {
+  padding-left: 275px;
+}
+
+header {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+article {
+  padding: 1rem 2rem;
+
+  ul, ol {
+    padding-left: 3rem;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+nav { 
+  position: fixed; 
+  top: 0; 
+  bottom: 0; 
+  left: 0; 
+  width: 275px;
+
+  .nav-link {    
+    height: 6rem;
+    line-height: 6rem;
+    font-size: 2rem;
+  }
+}
+
+footer {
+  padding: 4rem 4rem 2rem;
+
+  dt {
+    float: left;
+    clear: left;
+    margin: 0 2rem 2rem 0;
+    width: 72px;
+    text-align: right;
+  }
+
+  dd {
+    float: left;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.posts, .team, .wall {
+  margin-right: -1.5rem;
+
+  .post, .member, .brick {
+    width: 20rem;
+
+    .body {
+      font-size: 1.2rem;
+    }
+
+    .links a {
+      margin: 0 1rem;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      border-radius: 1rem;
+      background: $primary-bg;
+      opacity: 0;
+      pointer-events: none;
+      cursor: pointer;
+      @include transition('opacity 0.3s');
+    }
+
+    &:hover .overlay {
+      opacity: 0.1;
+    }
+  }
+}
+
+.screenshots {
+  width: 504px;
+  height: 386px;
+  margin: auto;
+
+  button {
+    margin-top: 20px;
+    height: 262px;
+    opacity: 0.2;
+    @include transition('opacity 0.3s');
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &.prev,
+    &:first-child {
+      margin-left: 20px;
+    }
+
+    &.next,
+    &:last-child {
+      margin-right: 20px;
+    }
+  }
+
+  .images {
+    width: 464px;
+    height: 386px;
+    margin: 20px;
+
+    > a {
+      width: 464px;
+      height: 262px;
+    }
+  }
+}
+
+
+#landing {
+
+  #welcome {
+    padding-top: 30vh;
+  }
+
+  #credibility > .reference {
+
+    .avatar {
+      height: 92px;
+      width: 92px;
+    }
+
+    .quote {
+      max-width: 50vw;
+    }
+
+    .name, .company {
+      margin-left: calc(96px + 2.5rem)
+    }
+  }
+
+  #logos .cred-logo {
+    height: 6rem;
+    margin-right: 4rem;
+
+    img {
+      @include transition('filter 0.3s');
+
+      &:hover {
+        filter: grayscale(0%);
+      }
+    }
+  }
+
+  #process li > div {
+    display: table-cell;
+    height: 3em;
+    vertical-align: middle;
+  }
+
+  .posts, .team, .wall {
+    padding: 0!important;
+    background: inherit!important;
+
+    .post, .member, .brick {
+      background: $dark-bg!important;
+    }
+  }
+}
+
+section {
+    padding: 4rem 4rem 2rem;
+
+    ul,ol {
+      padding-left: 2rem;
+    }
+
+    button,
+    a.button {
+      @include transition('color 0.3s, background 0.3s');
+
+      &:hover {
+        color: $secondary-text;
+        background: $secondary-bg;
+      }
+    }
+  }

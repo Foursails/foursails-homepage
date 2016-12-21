@@ -1,0 +1,579 @@
+//
+// IMPORTS
+//
+
+@import "_reset";
+@import "_variables";
+// Syntax highlighting @import is at the bottom of this file
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  color: $default-text;
+  background: $default-bg;
+}
+
+blockquote {
+  margin-bottom: 1rem;
+  margin-right: 8rem;
+  border-left: 4px solid $secondary-bg;
+  margin-bottom: 1rem;
+  margin-right: 10%;
+  padding-left: 2rem;
+  color: $secondary-bg;
+}
+
+iframe {
+  width: 100%;
+}
+
+strong {
+  font-weight: bold!important;
+}
+
+em {
+  font-style: italic!important;
+}
+
+nav { 
+  background: linear-gradient(135deg, $secondary-bg 25%, $primary-bg 100%);
+  font-weight: bold;
+
+  a {
+    @include transition('color 0.3s, background 0.3s');
+    text-decoration: none;
+    color: $secondary-text;
+    display: block;
+  }
+
+  .nav-link {
+    text-align: center;
+  }
+
+  .nav-link:hover,
+  .nav-link.is-selected {
+    color: $primary-text;
+    background: $primary-bg;
+  }
+
+  .nav-logo {
+    padding: 1rem;
+    height: 82px;
+    color: $primary-text;
+
+    img {
+      margin-right: 0.5rem;
+      vertical-align: middle;
+      float: left;
+    }
+    div {
+      div:first-child {
+        font-size: 32px;
+      }
+      div:last-child {
+        font-size: 20px;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+main {
+  border-top: 2px solid #ddd;
+  padding: 2rem 4rem;
+  overflow-y: auto;
+}
+
+header > .subtitle {
+  margin-top: 0.5em;
+}
+
+article {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4, strong {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  h1, h2, h3 {
+    margin: 2rem 0 1rem 0!important;
+  }
+  p, ol {
+    line-height: 1.5rem;
+  }
+  p + * {
+    margin-top: 1rem;
+  }
+  ul, ol {
+    margin: 1rem 0;
+    list-style-position: inside;
+  }
+  ul {
+    list-style-type: circle;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  li {
+    margin-bottom: 0.5rem;
+  }
+  p:last-child {
+    
+    a {
+      display: block;
+    }
+
+    br {
+      display: none;
+    }
+  }
+
+  .email {
+    text-indent: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+footer {
+  background: $secondary-bg;
+  color: $secondary-text;
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea,
+button, input[type="submit"], a.button {
+  display: block;
+  padding: 0.5em 1em;
+  font-family: inherit;
+  font-size: 1.2rem;
+}
+
+label {
+  display: block;
+  padding: 0 1em;
+  margin: 0.5em 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  border-top: 0;
+  border-right: 2px solid $dark-bg;
+  border-bottom: 2px solid $dark-bg;
+  border-left: 0;
+  background: white;
+}
+
+button,
+input[type="submit"],
+a.button {
+  cursor: pointer;
+  color: $primary-text;
+  background: $primary-bg;
+  border: 0;
+  border-radius: 1rem;
+  text-decoration: none;
+}
+
+iframe {
+  width: 100%;
+}
+
+section {
+
+  .title {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
+  }
+
+  .heading {
+    font-size: 1.5rem;
+    margin: 0.5em 0;
+  }
+
+  .big {
+    font-size: 1.5rem;
+  }
+
+  p, li, button, input, textarea {
+    font-size: 1.2rem;
+  }
+
+  p {
+    margin-bottom: 0.5em;
+    line-height: 1.5em;
+    text-align: justify;
+  }
+
+  li {
+    line-height: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  ul,ol {
+    padding-top: 1rem;
+
+    i {
+      min-width: 1.5em;
+      text-align: center;
+      margin-right: 0.5em;
+      margin-top: 0.25em;
+    }
+  }
+}
+
+.posts, .team, .wall {
+  background: $dark-bg;
+  
+  .post, .member, .brick { 
+    float: left;
+    padding: 1.2rem; 
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+    border-radius: 1rem;
+    background: $default-bg;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    img + h1 {
+      margin-top: 0.5em;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 0.2em;
+      color: $secondary-bg;
+    }
+
+    .body {
+      margin-top: 0.5em;
+      color: $secondary-bg;
+    }
+
+    .links {
+      display: table;
+      width: 100%;
+      margin-top: 0.5em;
+      font-size: 1.5rem;
+
+      a {
+        display: table-cell;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.screenshots { 
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &:not(:first-child) {
+    margin-top: 2rem;
+  }
+
+  button {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    border-radius: 0;
+    padding: 0 5px;
+    background: $default-bg;
+    color: $default-text;
+    font-size: 4rem;
+   
+    &.prev,
+    &:first-child {
+      left: 0;
+    }
+
+    &.next,
+    &:last-child {
+      right: 0;
+    }
+  }
+
+  .images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+
+    > a {
+      display: inline-block;
+      vertical-align: top;
+      text-decoration: none;
+      overflow: hidden;
+      @include transition('margin-left 1s ease-in-out');
+
+      > img {
+        width: 100%;
+      }
+    }
+  }
+
+  .monitor {
+    pointer-events: none;
+
+    > img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+.row { 
+  content: "";
+  display: table;
+  clear: both;
+  width: 100%;
+
+  + .row {
+    margin-top: 0.5rem;
+  }
+}
+
+[class*="col-"] {
+  float: left;
+
+  + [class*="col-"] {
+
+    @media screen and (max-width: 640px) {
+      margin-top: 0.5rem;
+    }
+
+    @media screen and (min-width: 641px) {
+      padding-left: 0.5rem;
+    }
+  }
+}
+
+.col-1-2 { 
+
+  @media screen and (max-width: 640px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 641px) {
+    width: 50%;
+  }
+}
+
+.full-width { 
+  width: 100%;
+}
+
+.page {
+  min-height: 100vh;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-middle {
+  text-align: center;
+}
+
+.centered {
+  @include centered;
+}
+
+#landing {
+
+  #welcome {
+    position: relative;
+    background-image: url('images/overlay-3.jpg');
+  }
+
+  #trust {
+    background-position: center top;
+    background-image: url('images/overlay-2.jpg');
+  }
+
+  #roi {
+    background-image: url('images/overlay-1.jpg');
+  }
+
+  #growth {
+    background-image: url('images/overlay-4.jpg');
+  }
+
+  #credibility > .reference {
+
+    + .reference {
+      margin-top: 2em;
+    }
+
+    .avatar {
+      display: inline-block;
+      margin-right: 2.5rem;
+      border-radius: 50%;
+      border: 0.5rem solid $dark-bg;
+      vertical-align: top;
+    }
+
+    .quote {
+      display: inline-block;
+      position: relative;
+      margin-bottom: 0.5em;
+      padding: 2rem;
+      background: $dark-bg; 
+      line-height: 1.2em;
+
+      &::before {
+        content: url(/images/quote.svg);
+        position: absolute;
+        left: -32px;
+      }
+    }
+
+    .name {
+      font-weight: bold;
+    }
+
+    .name,
+    .company {
+      line-height: 1.2em;
+
+      a {
+        color: inherit; 
+      }
+    }
+  }
+
+  #logos {
+    white-space: nowrap;
+
+    .cred-logo {
+      display: inline-block;
+
+      img {
+        max-height: 100%;
+        max-width: 100%;
+        filter: grayscale(100%);
+      }
+    }
+  }
+
+  .posts, .team, .wall {
+    padding: 0!important;
+    background: inherit!important;
+
+    .post, .member, .brick {
+      background: $dark-bg!important;
+    }
+  }
+
+  .title.centered, .subtitle.centered {
+    max-width: 45rem;
+  }
+
+  .overlay {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: url('images/square_bg.png') repeat $default-bg;
+      opacity: 0.9;
+    }
+
+    > * {
+      position: inherit;
+    }
+  }
+
+  .call {
+    font-size: 2rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  section {
+    overflow: hidden;
+    
+    .title, .heading, .subtitle {
+      margin-bottom: 1em;
+    }
+
+    p {
+      text-indent: 2em;
+    }
+
+    button,
+    .button {
+      display: inline-block;
+      font-size: 2rem;
+    }
+  }
+
+  + footer {
+    margin-top: 2rem;
+  }
+}
+
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+@import "_highlights";

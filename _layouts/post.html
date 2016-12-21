@@ -1,6 +1,14 @@
 ---
 layout: default
 ---
+<header>
+  <div class="title">{{ page.title }}</div>
+  <div class="subtitle">
+    {{ page.author | default: site.author }}
+    on <time>{{ page.date | date_to_string }}</time>
+  </div>
+</header>
+
 <article>
 	{{ content }}
 </article>
