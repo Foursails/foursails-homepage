@@ -1,0 +1,205 @@
+---
+layout: aurelia
+permalink: /aurelia
+---
+<div id="landing">
+
+  <section id="welcome" class="page overlay">
+    <div class="content centered">
+
+      <div class="title centered">
+        Our Developers Lead the Way in Developing Aurelia Apps
+      </div>
+      <a class="button" href="/contact/">Let's Work Together</a>
+    </div>
+  </section>
+
+  <section id="expertise">
+    <div class="subtitle centered">
+      The Most Trusted Name in Aurelia
+    </div>
+
+    <p>Foursails team members have been learning and building Aurelia from the start. We have written dozens of authoritative blog posts, answered hundreds of StackOverflow questions, and reviewed and contributed to numerous books and video resources. We have worked directly with Blue Spire, Aurelia's holding company, to support several companies in delivering their mission critical products. Talent companies offer freelancers that may not be Aurelia experts, but our team is comprised of the top Aurelia developers, engineers, programmers, coders, architects, and consultants. That's why we are the most trusted name in Aurelia.</p>
+
+    <p>Services we can provide include:</p>
+
+    <ul>
+      <li>
+        <i class="fa fa-cubes pull-left"></i>
+        Architecting an Application with Guidelines for Best Practices</li>
+      <li>
+        <i class="fa fa-code pull-left"></i>
+        Designing and Developing Applications, Components, and Tests</li>
+      <li>
+        <i class="fa fa-graduation-cap pull-left"></i>
+        Reviewing Code and Training Your Team</li>
+      <li>
+        <i class="fa fa-rocket pull-left"></i>
+        Porting Your Application from Angular to Aurelia</li>
+      <li>
+        <i class="fa fa-book pull-left"></i>
+        Reviewing Your Blog, Book, or Video Content for Accuracy and Completeness</li>
+    </ul>  
+  </section>
+
+  <section id="partner" class="call overlay">
+    <div class="aurelia-logo pull-left">
+      <img src="images/cred/aurelia-logo.png" />
+    </div>
+    <div class="title">Official Partner of Aurelia</div>
+    <div class="content">
+      <a class="button" href="/contact/">Reach Out to Us</a>
+    </div>
+  </section>
+
+  <section id="credibility">
+
+    <div class="subtitle centered">What our partners have to say about collaborating with us</div>
+    {% for item in site.data.cred %}
+    {% if item.quote and item.avatar and item.aurelia %}
+    <div class="reference">
+      <img class="avatar" src="{{ item.avatar }}" />
+      <div class="quote">{{ item.quote }}</div>
+      <div class="name">{{ item.name }}</div>
+      <div class="company">
+        {{ item.title }} of
+        <a href="{{ item.url }}">{{ item.company }}</a>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+    <div class="subtitle centered">A few of our creations</div>
+    <div id="portfolio" class="posts">
+      {% for post in site.posts %}
+        {% if post.category == 'portfolio' and post.tags contains 'aurelia' %}
+          <div class="post">  
+            <a href="{{ post.url }}">
+            
+              <!-- thumbnail -->
+              {% if post.thumb %}
+              <img class="post-thumb" src="/images/{{ post.thumb }}" />
+              {% endif %}
+              
+              <!-- title -->
+              <h1>{{ post.title }}</h1>
+              
+              <!-- blurb -->
+              <div class="body">{{ post.blurb }}</div>
+            
+              <div class="overlay"></div>
+            </a>
+          </div>  
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% include masonry.html grid="#portfolio" item=".entry" %}
+  </section>
+
+  <section id="roi" class="call overlay">
+
+    <h1 class="subtitle">
+      Aurelia apps run <strong>flawlessly on every device</strong>.
+    </h1>
+    <div class="content">
+      <a class="button" href="/contact/">Talk With Us</a>
+    </div>
+  </section>
+
+  <section id="process" class="page">
+
+    <div class="subtitle centered">
+      Professional apps for every business
+    </div>
+
+    <p>Apps have brought a new level of power and interactivity to the internet. In the past, the need for a different app with a different development team for each device has made building a high quality app prohibitavely expensive. Today, Aurelia brings all the power of the app directly into the browser using the most stable web standards. Whether you're a government organization in need of a data collection app, a B2B organization looking to optimize internal workflow with a communication, inventory tracking, or CRM app, or a SaaS building your client-facing application, Aurelia apps yield tremendous return on investment.</p>
+
+    <p>The benefits of an Aurelia app include:</p>
+
+    <ol>
+      <li>
+        <i class="fa fa-tablet fa-2x pull-left"></i>
+        <div>
+          Aurelia apps run everywhere: Desktop, mobile, Android, and iOS.
+        </div>
+      </li>
+      <li>
+        <i class="fa fa-flash fa-2x pull-left"></i>
+        <div>
+          Aurelia apps don't need to be downloaded, so users start using them immediately.
+        </div>
+      </li>
+      <li>
+        <i class="fa fa-cloud fa-2x pull-left"></i>
+        <div>
+          Aurelia apps live on the cloud, not an app store, and are easily found with Google.
+        </div>
+      </li>
+      <li>
+        <i class="fa fa-tachometer fa-2x pull-left"></i>
+        <div>
+          Since Aurelia uses modern web standards, they are faster to create and easier to maintain.
+        </div>
+      </li>
+      <li>
+        <i class="fa fa-users fa-2x pull-left"></i>
+        <div>
+          Since Aurelia is commercially supported by Foursails, help is always on hand.
+        </div>
+      </li>
+    </ol>
+
+  </section>
+
+  <section id="growth" class="call overlay">
+    <h1 class="subtitle">Aurelia apps maximize your <strong>return on investment</strong>.</h1>
+    <a class="button" href="/contact/">Connect with us</a>
+  </section>
+
+  <section>
+    <div class="subtitle centered">Our Publications</div>
+    <div id="blog" class="posts">
+      {% for post in site.posts %}
+        {% if post.category == 'blog' and post.tags contains 'aurelia' %}
+          <div class="post">  
+            <a href="{{ post.url }}">
+            
+              <!-- thumbnail -->
+              {% if post.thumb %}
+              <img class="post-thumb" src="/images/{{ post.thumb }}" />
+              {% endif %}
+              
+              <!-- title -->
+              <h1>{{ post.title }}</h1>
+              
+              <!-- blurb -->
+              <div class="body">{{ post.blurb }}</div>
+            
+              <div class="overlay"></div>
+            </a>
+          </div>  
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% include masonry.html grid="#blog" item=".post" %}
+  </section>
+  </section>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.4090380102734!2d-80.14406568533857!3d26.118202983476174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d90057c24d3f55%3A0x2a42279281550d50!2sAxis+Space!5e0!3m2!1sen!2sus!4v1481721496225" height="250" frameborder="0" style="border:0;" allowfullscreen></iframe>
+
+</div>
+
+<footer class="row">
+  <div class="col-1-2">
+    <div class="title">Foursails Technology Group</div>
+    <div class="subtitle">Working Smart Since 2014</div>
+  </div>
+  <dl class="col-1-2">
+    <dt>Address</dt>
+    <dd>333 Las Olas Way, Fort Lauderdale, FL 33301</dd>
+    <dt>Email</dt>
+    <dd><a href="mailto:davismj@foursails.co">davismj@foursails.co</a></dd>
+    <dt>Phone</dt>
+    <dd><a href="tel:8503295553">(850) 329 5553</a></dd>
+  </dl>
+</footer>

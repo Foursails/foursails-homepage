@@ -19,6 +19,7 @@
   title: Lead Software Developer
   url: http://bluenickel.co.za/
   quote: "...well thought out, simple, maintainable, reusable code."
+  aurelia: true
 
 - company: Carrousel
 
@@ -31,3 +32,4 @@
   title: President
   ur: http://bluespire.com/
   quote: "...exceptional skill and professionalism on numerous development projects across a host of configurations."
+  aurelia: true

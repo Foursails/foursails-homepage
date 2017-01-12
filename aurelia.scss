@@ -1,0 +1,33 @@
+---
+---
+nav {
+  background: linear-gradient(135deg, #E82887 25%, #6E4D9B 100%)!important;
+}
+
+button, a.button {
+  background: #E82887!important;
+}
+
+button:hover, a.button:hover, footer, .nav-link:hover {
+  background: #6E4D9B!important; 
+}
+
+.posts .post .body, .team .member h2 {
+  color: #6E4D9B!important;
+}
+
+#partner .aurelia-logo {    
+  height: 6rem;
+  width: 6rem;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media(min-width: 641px) {
+  #partner .aurelia-logo {
+    margin-top: -1.5rem;
+  }
+}
