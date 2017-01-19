@@ -25,7 +25,8 @@ google_analytics: UA-58706961-1
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: http://foursails.co/
+url: http://www.foursails.co
+logo: /images/logo.png
 
 #
 # !! You don't need to change any of the configuration flags below !!

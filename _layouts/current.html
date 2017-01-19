@@ -7,8 +7,8 @@
       <link rel="stylesheet" href="{{ href }}" type="text/css" />
     {% endfor %}
 
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.name }}</title>
-    {% if page.title %}<meta property="og:title" content="{{ page.title }}" />{% endif %}
+    <title>{{ page.title }} in {{ site.time | date: '%B %Y' }}</title>
+    <meta property="og:title" content="{{ page.title }} in {{ site.time | date: '%B %Y' }}" />
 
     {% if page.blurb %}
       <meta name="description" content="{{ page.blurb }}" />
@@ -16,6 +16,7 @@
     {% endif %}
 
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="{{ site.url }}{{ site.logo }}" />
     <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   </head>
   <body>

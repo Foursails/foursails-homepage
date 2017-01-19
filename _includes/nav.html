@@ -1,0 +1,12 @@
+<nav>
+  <a class="nav-logo" href="/">
+    <img src="{{ site.logo }}" />
+    <div>
+      <div>Foursails</div>
+      <div>Technology Group</div>
+    </div>
+  </a>
+  <a class="nav-link {% if page.url contains 'blog' %}is-selected{% endif %}" href="/blog/">Blog</a>
+  <a class="nav-link {% if page.url contains 'portfolio' %}is-selected{% endif %}" href="/portfolio/">Portfolio</a>
+  <a class="nav-link {% if page.url == '/contact/' %}is-selected{% endif %}" href="/contact/">Contact</a>
+</nav>
