@@ -6,7 +6,7 @@ author: Matthew James Davis
 blurb: Advice on the benefits of open source development from Taye Adeyemi, creator of interact.js.
 
 category: blog
-tags: open source interact.js
+tags: open-source interact.js
 
 published: true
 ---
