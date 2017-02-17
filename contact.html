@@ -7,7 +7,7 @@ permalink: /contact/
 
 	<div class="subtitle">Let us know what you need and how we can help.</div>
 
-	<form action="//formspree.io/davis.matthewjames+consulting@gmail.com" method="POST">
+	<form action="//formspree.io/davismj@foursails.co" method="POST">
 		<div class="row">
 			<div class="col-1-2"><input class="full-width" type="text" name="name" placeholder="Name" /></div>
   		<div class="col-1-2"><input class="full-width" type="email" name="_replyto" placeholder="Email" /></div>
@@ -23,27 +23,27 @@ permalink: /contact/
     <div class="row">
       <div class="heading">Which services would you like to learn about?</div>
       <label>
-        <input type="checkbox" />
+        <input type="checkbox" name="services" value="custom application"/>
         Crafting a Custom Application
       </label>
       <label>
-        <input type="checkbox" />
+        <input type="checkbox" name="services" value="data visualization" />
         Mapping or Data Visualization
       </label>
       <label>
-        <input type="checkbox" />
+        <input type="checkbox" name="services" value="custom database" />
         Building a Custom Database
       </label>
       <label>
-        <input type="checkbox" />
+        <input type="checkbox" name="services" value="gamification" />
         Gamification
       </label>
       <label>
-        <input type="checkbox" />
+        <input type="checkbox" name="services" value="security audit" />
         Performing a Security Audit
       </label>
       <label>
-        <input type="checkbox" />
+        <input type="checkbox" name="services" value="other" />
         Something Else
       </label>
     </div>
@@ -51,6 +51,6 @@ permalink: /contact/
     <div class="row">
     	<input class="big pull-right" type="submit" value="Send" />
   	</div>
-  	<input type="hidden" name="_next" value="/thanks.html" />
+  	<input type="hidden" name="_next" value="/thanks/" />
 	</form>
 </section>
