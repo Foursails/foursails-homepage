@@ -52,6 +52,6 @@ Though there is no public facing version of the application, you can view a shor
 
 # Links
 
-[EasyTerritory](http://www.easyterritory.com)<br />
-[MapDotNet](http://www.mapdotnet.com)<br />
+[EasyTerritory](http://www.easyterritory.com)
+[MapDotNet](http://www.mapdotnet.com)
 [Durandal](http://durandaljs.com/)
