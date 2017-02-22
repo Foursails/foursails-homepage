@@ -356,6 +356,7 @@ section {
       vertical-align: top;
       text-decoration: none;
       overflow: hidden;
+      background: white;
       @include transition('margin-left 1s ease-in-out');
 
       > img {
