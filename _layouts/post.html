@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
   <head>
-
     {% include head.html %}
-
+    <meta name="twitter:card" content="summary" />
     <title>{{ page.title }} - {{ site.name }}</title>
     <meta property="og:title" content="{{ page.title }}" />
-
+    <meta name="twitter:title" content="{{ page.title }}" />
     {% if page.blurb %}
       <meta name="description" content="{{ page.blurb }}" />
       <meta property="og:description" content="{{ page.blurb }}" />
+      <meta name="twitter:description" content="{{ page.blurb }}" />
     {% endif %}
-
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="{{ page.date }}" />
-
     <meta name="author" content="{{ page.author | default: site.url }}" />
     <meta property="article:author" content="{{ page.author | default: site.author }}" />
     <meta property="article:publisher" content="{{ site.url }}" />
-    
     {% if page.tags %}
       <meta name="keywords" content="{{ page.tags | join: ',' }}" />
-
       {% for tag in page.tags %}
         <meta property="article:tag" content="{{ tag }}" />
       {% endfor %}
     {% endif %}
-    
     <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
     <meta property="og:image" content="{{ site.url }}{{ page.thumb | default: site.logo }}" />
-
+    <meta name="twitter:image" content="{{ site.url }}{{ page.thumb | default: site.logo }}" />
+    <meta name="twitter:site" content="{{ site.twitter }}" />
+    <meta name="twitter:creator" content="{{ site.twitter }}" />
   </head>
 
   <body>
