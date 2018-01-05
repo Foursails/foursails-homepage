@@ -1,0 +1,65 @@
+---
+layout: page
+title: About Foursails Technology Group
+permalink: /company/
+---
+<div id="company">
+  
+  <section id="team">
+    <div class="title">Our Team</div>
+    <div class="team">
+      {% for member in site.data.team %}
+      <div class="member">
+        <img src="{{ site.baseurl }}{{ member.avatar }}" />
+        <h1>{{ member.name }}</h1>
+        <h2>{{ member.role }}</h2>
+        <!-- <div class="body">{{ member.bio }}</div> -->
+        <div class="links">
+          {% if member.email %}
+            <a href="mailto:{{ member.email }}"><i class="fa fa-envelope"></i></a>
+          {% endif %}
+          {% if member.twitter %}
+            <a href="https://twitter.com/{{ member.twitter }}"><i class="fa fa-twitter"></i></a>
+          {% endif %}
+          {% if member.github %}
+            <a href="http://github.com/{{ member.github }}"><i class="fa fa-github"></i></a>
+          {% endif %}
+          {% if member.stackoverflow %}
+            <a href="http://stackoverflow.com/users/{{ member.stackoverflow }}"><i class="fa fa-stack-overflow"></i></a>
+          {% endif %}
+          {% if member.linkedin %}
+            <a href="https://www.linkedin.com/in/{{ member.linkedin }}"><i class="fa fa-linkedin"></i></a>
+          {% endif %}
+          {% if member.behance %}
+            <a href="https://www.behance.net/{{ member.behance }}"><i class="fa fa-behance"></i></a>
+          {% endif %}
+          {% if member.url %}
+            <a href="{{ member.url }}"><i class="fa fa-link"></i></a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="opportunities">
+    <div class="title">Opportunties</div>
+    <div class="team">
+      {% for op in site.data.ops %}
+      <div class="member">
+        <h1>{{op.role}}</h1>
+        <h2>{{op.description}}</h2>
+        <p class="body">
+          <a href="mailto:davismj@foursails.co?subject=Here's why I'm your next {{op.role}}">
+            <i class="fa fa-paper-plane"></i>
+            Apply
+          </a>
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+
+  </section>
+</div>

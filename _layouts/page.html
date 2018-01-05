@@ -4,7 +4,7 @@
     {% include head.html %}
 
     {% for href in page.css %}
-      <link rel="stylesheet" href="{{ href }}" type="text/css" />
+      <link rel="stylesheet" href="/{{ href }}" type="text/css" />
     {% endfor %}
 
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.name }}</title>
@@ -16,6 +16,7 @@
     {% endif %}
 
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="{{ site.url }}{{ site.logo }}" />
     <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   </head>
   <body>

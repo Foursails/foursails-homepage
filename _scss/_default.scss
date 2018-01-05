@@ -92,6 +92,8 @@ header > .subtitle {
 }
 
 article {
+  -webkit-overflow-scrolling: touch;
+  
   h1 {
     font-size: 2rem;
   }
@@ -260,8 +262,24 @@ section {
   }
 }
 
-.posts, .team, .wall {
+.team {
+  @include clearfix;
+  background: inherit;
+
+  .member {
+    background: $dark-bg;
+  }
+}
+
+.posts, .wall {
   background: $dark-bg;
+
+  .post, .brick {
+    background: $default-bg;
+  }
+}
+
+.posts, .team, .wall {
   
   .post, .member, .brick { 
     float: left;
@@ -269,7 +287,6 @@ section {
     margin-bottom: 1.5rem;
     margin-right: 1.5rem;
     border-radius: 1rem;
-    background: $default-bg;
 
     a {
       color: inherit;
